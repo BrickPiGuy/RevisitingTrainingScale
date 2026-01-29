@@ -281,7 +281,7 @@
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
-    <div class="slide-counter" id="slideCounter">1 / 11</div>
+    <div class="slide-counter" id="slideCounter">1 / 12</div>
     
     <div class="presentation-container">
         <!-- Slide 1: Title -->
@@ -485,7 +485,22 @@ Comparison & t value & Raw p & Corrected p & Reject $H_0$ \\
             </ul>
         </div>
 
-        <!-- Slide 10: Limitations & Next Steps -->
+        <!-- Slide 10: Statistical Significance vs. Performance -->
+        <div class="slide slide-2">
+            <h2>🔍 Statistical Significance ≠ Performance Gain</h2>
+            <div class="card">
+                <p><strong>Key insight:</strong> Bonferroni-corrected p-values show all power consumption differences are highly significant (p &lt; 0.001), yet performance metrics are inconsistent or diminishing.</p>
+            </div>
+            <ul>
+                <li>Strict monotonic increase in power <em>and cost</em></li>
+                <li>Inconsistent gains in inverse perplexity</li>
+                <li>Statistical significance does not imply practical utility</li>
+                <li>Energy efficiency must be weighed against marginal improvements</li>
+                <li>The tradeoff space is much more complex than typical scaling laws suggest</li>
+            </ul>
+        </div>
+
+        <!-- Slide 11: Limitations & Next Steps -->
         <div class="slide slide-4">
             <h2>🧭 Limitations & Next Steps</h2>
             <ul>
@@ -497,7 +512,7 @@ Comparison & t value & Raw p & Corrected p & Reject $H_0$ \\
             </ul>
         </div>
 
-        <!-- Slide 11: Thank You -->
+        <!-- Slide 12: Thank You -->
         <div class="slide slide-5">
             <div class="emoji">🎉</div>
             <h1>Thank You!</h1>
