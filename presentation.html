@@ -281,15 +281,15 @@
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
-    <div class="slide-counter" id="slideCounter">1 / 10</div>
+    <div class="slide-counter" id="slideCounter">1 / 11</div>
     
     <div class="presentation-container">
         <!-- Slide 1: Title -->
         <div class="slide slide-1 active">
             <h1>Revisiting Training Scale</h1>
             <h2 class="subtitle">An Empirical Study of Token Count, Power Consumption, and Parameter Efficiency</h2>
-            <p class="lead">Joe Dwyer</p>
-            <p class="meta">arXiv:2601.06649</p>
+            <p class="lead">Joe Dwyer, PhD</p>
+            <a href="https://arxiv.org/abs/2601.06649" target="_blank" rel="noopener noreferrer"><p class="meta">arXiv:2601.06649</p></a>
             <p class="note">Press → or click Next to continue</p>
         </div>
 
@@ -358,7 +358,7 @@
 
         <!-- Slide 7: Results Table -->
         <div class="slide slide-2">
-            <h2>📋 Normalized Results (Illustrative)</h2>
+            <h2>📋 Normalized Results</h2>
             <table aria-label="Normalized results table">
                 <thead>
                     <tr>
@@ -401,7 +401,7 @@
 \centering
 \small
 \begin{tabular}{lcccc}
-	oprule
+\toprule
 Token Count & Perf. $\Delta$ (\uparrow) & Energy (Wh) & Runtime (min) & Efficiency Index (\uparrow) \\
 \midrule
 500K & 0.97$\times$ & 0.62$\times$ & 0.58$\times$ & \textbf{1.16$\times$} \\
@@ -415,7 +415,66 @@ Token Count & Perf. $\Delta$ (\uparrow) & Energy (Wh) & Runtime (min) & Efficien
             </details>
         </div>
 
-        <!-- Slide 8: Implications -->
+        <!-- Slide 8: Table 3 (Bonferroni Corrections) -->
+        <div class="slide slide-3">
+            <h2>📌 Table 3: Bonferroni Corrections (Power)</h2>
+            <table aria-label="Bonferroni corrections for power consumption">
+                <thead>
+                    <tr>
+                        <th>Comparison</th>
+                        <th>t value</th>
+                        <th>Raw p</th>
+                        <th>Corrected p</th>
+                        <th>Reject H0</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>500K vs 1M</td>
+                        <td>-40.6892</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>500K vs 2M</td>
+                        <td>-84.1646</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>1M vs 2M</td>
+                        <td>-36.6477</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>True</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note">From Table 3 in arXiv:2601.06649 (power consumption pairwise comparisons).</p>
+            <details class="card">
+                <summary>TeX source for Table 3</summary>
+                <pre>
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Comparison & t value & Raw p & Corrected p & Reject $H_0$ \\
+\midrule
+500K vs 1M & -40.6892 & 0.00 & 0.00 & True \\
+500K vs 2M & -84.1646 & 0.00 & 0.00 & True \\
+1M vs 2M & -36.6477 & 0.00 & 0.00 & True \\
+\bottomrule
+\end{tabular}
+\caption{Bonferroni-corrected pairwise comparisons for power consumption.}
+\end{table}
+                </pre>
+            </details>
+        </div>
+
+        <!-- Slide 9: Implications -->
         <div class="slide slide-3">
             <h2>💡 Implications</h2>
             <ul>
@@ -426,7 +485,7 @@ Token Count & Perf. $\Delta$ (\uparrow) & Energy (Wh) & Runtime (min) & Efficien
             </ul>
         </div>
 
-        <!-- Slide 9: Limitations & Next Steps -->
+        <!-- Slide 10: Limitations & Next Steps -->
         <div class="slide slide-4">
             <h2>🧭 Limitations & Next Steps</h2>
             <ul>
@@ -438,7 +497,7 @@ Token Count & Perf. $\Delta$ (\uparrow) & Energy (Wh) & Runtime (min) & Efficien
             </ul>
         </div>
 
-        <!-- Slide 10: Thank You -->
+        <!-- Slide 11: Thank You -->
         <div class="slide slide-5">
             <div class="emoji">🎉</div>
             <h1>Thank You!</h1>
