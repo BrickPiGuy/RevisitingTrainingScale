@@ -273,6 +273,11 @@
             animation: bounce 2s infinite;
         }
 
+        img {
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+        }
+
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
@@ -281,7 +286,7 @@
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
-    <div class="slide-counter" id="slideCounter">1 / 12</div>
+    <div class="slide-counter" id="slideCounter">1 / 13</div>
     
     <div class="presentation-container">
         <!-- Slide 1: Title -->
@@ -413,6 +418,12 @@ Token Count & Perf. $\Delta$ (\uparrow) & Energy (Wh) & Runtime (min) & Efficien
 \end{table}
                 </pre>
             </details>
+        </div>
+
+        <!-- Slide 7: Statistical Test Decision Tree -->
+        <div class="slide slide-1">
+            <h2>Statistical Test Decision Tree</h2>
+            <img src="Decision Tree.png" alt="Statistical Test Decision Tree" style="max-width: 90%; max-height: 70%; object-fit: contain;">
         </div>
 
         <!-- Slide 8: Table 3 (Bonferroni Corrections) -->
